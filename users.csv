@@ -1,0 +1,21 @@
+UserID,Name,Email,Role
+1,Alice Johnson,alice.johnson@example.com,Analyst
+2,Bob Smith,bob.smith@example.com,Manager
+3,Charlie Brown,charlie.brown@example.com,Developer
+4,Diana Prince,diana.prince@example.com,HR Specialist
+5,Ethan Hunt,ethan.hunt@example.com,Project Manager
+6,Fiona Gallagher,fiona.gallagher@example.com,Finance Analyst
+7,George Miller,george.miller@example.com,Operations Lead
+8,Hannah Lee,hannah.lee@example.com,Marketing Coordinator
+9,Ian Wright,ian.wright@example.com,IT Support
+10,Jane Foster,jane.foster@example.com,Data Scientist
+11,Kyle Reese,kyle.reese@example.com,Security Analyst
+12,Laura Palmer,laura.palmer@example.com,Compliance Officer
+13,Michael Scott,michael.scott@example.com,Regional Manager
+14,Nina Williams,nina.williams@example.com,QA Engineer
+15,Oscar Martinez,oscar.martinez@example.com,Accountant
+16,Pam Beesly,pam.beesly@example.com,Receptionist
+17,Quentin Blake,quentin.blake@example.com,Product Manager
+18,Rachel Green,rachel.green@example.com,HR Manager
+19,Sam Winchester,sam.winchester@example.com,Business Analyst
+20,Tina Turner,tina.turner@example.com,Event Coordinator
