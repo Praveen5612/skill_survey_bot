@@ -1,4 +1,25 @@
 # app.py
+import logging
+import sys
+import streamlit as st
+
+class IgnoreScriptRunContextFilter(logging.Filter):
+    def filter(self, record):
+        return "missing ScriptRunContext" not in record.getMessage()
+
+f = IgnoreScriptRunContextFilter()
+
+# Attach filter to root logger, common streamlit loggers, and any existing handlers
+logging.getLogger().addFilter(f)
+for name in ("streamlit", "streamlit.runtime", "streamlit.runtime.scriptrunner"):
+    logging.getLogger(name).addFilter(f)
+for h in logging.getLogger().handlers:
+    h.addFilter(f)
+
+# ensure a handler exists early so handler-level filters apply
+if not logging.getLogger().handlers:
+    logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
 import streamlit as st
 import pandas as pd
 import os
@@ -267,7 +288,6 @@ elif role == "User":
                 comments = st.text_area("General comments (optional)", key=f"comments_{sid}")
 
                 submitted = st.form_submit_button("Submit Survey")
-                # ...existing code...
                 if submitted:
                     d = load_datafile()
                     d.setdefault("responses", {})
